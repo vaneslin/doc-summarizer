@@ -10,4 +10,4 @@ def index(request):
 
     # When using React, this function would be different.
     # It would return a JSON response with the backend data i.e. database data to be rendered by React, because React would handle the frontend rendering.
-    return render(request, 'app/index.html')
+    return render(request, 'index.html')

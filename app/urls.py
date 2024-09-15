@@ -7,6 +7,7 @@ from . import views
     2. A view function: This is the function that will be called when the URL pattern is matched. 
     3. A name: This is the name of the URL pattern. This is used to refer to the URL pattern in the code.
 """
+
 urlpatterns = [
     path('', views.index, name='index'),
 ]

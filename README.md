@@ -13,17 +13,14 @@ README
     #navigate to project directory, where manage.py is located
     > cd <path to project directory>/doc-summarizer
 
-    #start server
-    > python manage.py runserver
-
-3. To start virtual env (should develop within this at all times)
-    #navigate to project directory, where the venv summarizerenv is located
-    > cd <path to project directory>/doc-summarizer
-
     #activate venv 
     > source summarizerenv/bin/activate
 
-    #you should now see (summarizerenv) prefixed before your terminal commands
+    #start server
+    > python manage.py runserver
 
-    #to deactivate
+    #to quit server
+    > CTRL + C
+
+    #to deactivate venv
     > deactivate
