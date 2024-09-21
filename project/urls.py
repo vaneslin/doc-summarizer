@@ -20,5 +20,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include("django_nextjs.urls")),
     path('', include('app.urls')),
 ]

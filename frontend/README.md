@@ -2,6 +2,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+# first run npm install to install local packages onto your machine lol
+Since Github does not install the packages needed:
+
+npm run install
+
 First, run the development server:
 
 ```bash

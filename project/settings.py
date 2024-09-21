@@ -39,7 +39,6 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # In production, the allowed hosts should be ['yourdomain.com', 'www.yourdomain.com']
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,6 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Add the Django Next.js app to the installed apps
+    "django_nextjs",
+
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend/dist')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
