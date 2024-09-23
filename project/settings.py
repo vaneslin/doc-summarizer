@@ -39,6 +39,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # In production, the allowed hosts should be ['yourdomain.com', 'www.yourdomain.com']
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+CORS_ORIGIN_ALLOW_ALL = True  # In production, restrict to specific domains
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,9 +51,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Custom apps
-    "django_nextjs",
-    "rest_framework",
-    "app",
+    'django_nextjs',
+    'rest_framework',
+    'app',
+    'corsheaders',
 
 ]
 
@@ -63,6 +66,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom middleware
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
