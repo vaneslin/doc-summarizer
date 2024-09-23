@@ -48,8 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Add the Django Next.js app to the installed apps
+    # Custom apps
     "django_nextjs",
+    "rest_framework",
+    "app",
 
 ]
 
