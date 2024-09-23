@@ -1,5 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { Card, CardBody } from "@nextui-org/react";
+import React from 'react';
+import DocumentsPage from './documents';
 
 export default function Home() {
   return (
@@ -12,6 +14,18 @@ export default function Home() {
           <p>Make beautiful websites regardless of your design experience.</p>
         </CardBody>
       </Card>
+
+      <div>
+        <h1>Welcome to the Document Summarizer App</h1>
+      <Card>
+        <CardBody>
+        {/* Include the DocumentsPage component */}
+      <DocumentsPage />
+        </CardBody>
+      </Card>
+      
+    </div>
+
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           Get started by editing{" "}
