@@ -14,6 +14,8 @@ class Document(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    objects = models.Manager()
+
     def generate_summary(self):
         self.summary = "This is a placeholder summary of the document."
         self.save()

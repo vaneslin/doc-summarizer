@@ -1,5 +1,7 @@
-from django.urls import path
-from . import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import index, DocumentViewSet
+
 
 """
     This is a router that defines URL patterns for the app. Path has three arguments:
@@ -8,6 +10,10 @@ from . import views
     3. A name: This is the name of the URL pattern. This is used to refer to the URL pattern in the code.
 """
 
+router = DefaultRouter()
+router.register(r'documents', DocumentViewSet)
+
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', index, name='index'),
+    path('api/', include(router.urls)),
 ]
